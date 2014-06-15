@@ -15,7 +15,6 @@
     "lodash": "~2.4.1",
     "ejs": "~0.8.4",
     "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.0",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~0.7.0",
     "grunt-concurrent": "~0.4.1",
@@ -67,7 +66,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "install": "node_modules/bower/bin/bower install",
-    "test": "grunt test"
+    "test": "grunt test",
+    "install": "node_modules/.bin/bower install"
   }
 }

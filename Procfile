@@ -1,1 +1,1 @@
-web: node_modules/grunt-cli/bin/grunt build serve
+web: node server.js
