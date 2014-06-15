@@ -1,28 +1,19 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name potorooApp
- * @description
- * # potorooApp
- *
- * Main module of the application.
- */
-angular
-  .module('potorooApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+angular.module('potorooApp', [
+  'ngResource',
+  'ngSanitize',
+  'ngRoute'
+])
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+
+    $locationProvider.html5Mode(true);
   });

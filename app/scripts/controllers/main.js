@@ -8,9 +8,8 @@
  * Controller of the potorooApp
  */
 angular.module('potorooApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.items = [
-      {firstName:'I.R.', lastName:'Baboon'},
-      {firstName:'I am', lastName:'Weasel'}
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+    $http.get('/api/items').success(function(items) {
+      $scope.items = items;
+    });
   });
